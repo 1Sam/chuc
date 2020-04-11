@@ -232,7 +232,7 @@ class GallerySkin extends CommonSkin
                 
                 preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $item->content, $match);
                 //echo $youtube_id = $match[1];
-                if(count($match) > 0) {
+                if($match != null) {
                     //dd($item->content,$match);
                     $externalPath = 'https://img.youtube.com/vi/'.$match[1].'/0.jpg';
                 }
